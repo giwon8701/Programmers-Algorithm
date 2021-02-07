@@ -12,7 +12,6 @@ public class programmers02_12906 {
     }
 
     public static int[] solution(int[] arr) {
-
         String temp = "";
         String res = "";
         for (int i : arr) {
@@ -21,8 +20,7 @@ public class programmers02_12906 {
 
         // 중복 제거
         for (int i = 0; i < temp.length(); i++) {
-            if ((i != temp.length() - 1) && (temp.charAt(i) == temp.charAt(i + 1))) {
-            } else if ((i != temp.length() - 1) && (temp.charAt(i) != temp.charAt(i + 1))) {
+            if ((i != temp.length() - 1) && (temp.charAt(i) != temp.charAt(i + 1))) {
                 res += temp.charAt(i);
             } else if (i == temp.length() - 1) {
                 res += temp.charAt(i);
