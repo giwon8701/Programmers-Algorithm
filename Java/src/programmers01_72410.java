@@ -23,8 +23,8 @@ public class programmers01_72410 {
         }
 
         System.out.print("1단계: ");
-        for (int i=0; i<id.size(); i++) {
-            System.out.print(id.get(i));
+        for (Character ch : id) {
+            System.out.print(ch);
         }
         System.out.println();
 
@@ -40,8 +40,8 @@ public class programmers01_72410 {
         }
 
         System.out.print("2단계: ");
-        for (int i=0; i<id.size(); i++) {
-            System.out.print(id.get(i));
+        for (Character ch : id) {
+            System.out.print(ch);
         }
         System.out.println();
 
@@ -52,15 +52,16 @@ public class programmers01_72410 {
                 if ((cnt != id.size() - 1) && id.get(cnt).equals('.') && id.get(cnt).equals(id.get(cnt + 1))) {   // Integer는 객체이므로 .equals()로 비교해야한다.
                     id.remove(cnt);
                     cnt = 0;
-                } else {
+                }
+                else {
                     cnt++;
                 }
                 if (cnt == id.size()) break;
         }
 
         System.out.print("3단계: ");
-        for (int i=0; i<id.size(); i++) {
-            System.out.print(id.get(i));
+        for (Character ch : id) {
+            System.out.print(ch);
         }
         System.out.println();
 
@@ -76,8 +77,8 @@ public class programmers01_72410 {
         }
 
         System.out.print("4단계: ");
-        for (int i=0; i<id.size(); i++) {
-            System.out.print(id.get(i));
+        for (Character ch : id) {
+            System.out.print(ch);
         }
         System.out.println();
 
@@ -87,24 +88,22 @@ public class programmers01_72410 {
         }
 
         System.out.print("5단계: ");
-        for (int i=0; i<id.size(); i++) {
-            System.out.print(id.get(i));
+        for (Character ch : id) {
+            System.out.print(ch);
         }
         System.out.println();
 
-        // 6단계 (new_id길이가 15이상일 때 그 뒤의 문자들 삭제)
+        // 6단계 (new_id길이가 16이상일 때 그 뒤의 문자들 삭제)
             if (id.size() >= 16) {
-                int len = id.size()-1;
-                for (int j=len; j>=15; j--) {
-                    id.remove(j);
-                }
+                // 15부터 size()-1까지 자른다음 삭제
+                id.subList(15, id.size()).clear();
                 // 끝 인덱스가 .일 경우 삭제
                 if (id.get(14).equals('.')) id.remove(14);
             }
 
         System.out.print("6단계: ");
-        for (int i=0; i<id.size(); i++) {
-            System.out.print(id.get(i));
+        for (Character ch : id) {
+            System.out.print(ch);
         }
         System.out.println();
 
@@ -117,15 +116,11 @@ public class programmers01_72410 {
             }
 
         System.out.print("7단계: ");
-        for (int i=0; i<id.size(); i++) {
-            System.out.print(id.get(i));
-        }
-        System.out.println();
-
-
         for (char i: id) {
+            System.out.print(i);
             answer.append(i);
         }
+        System.out.println();
 
         return answer.toString();
     }
