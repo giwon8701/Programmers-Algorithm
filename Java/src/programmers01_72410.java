@@ -21,6 +21,7 @@ public class programmers01_72410 {
     // 프로그래머스에서는 void가 아닌 String을 반환해줌
     public static String solution(String new_id) {
         StringBuilder answer = new StringBuilder();
+        // char[] 1단계
         char[] id_arr = new_id.toLowerCase().toCharArray();
         List<Character> id = new LinkedList<>();
 
@@ -31,7 +32,6 @@ public class programmers01_72410 {
         step_five(id);
         step_six(id);
         step_seven(id, answer);
-
 
         return answer.toString();
 
@@ -72,7 +72,7 @@ public class programmers01_72410 {
         }
         System.out.println();
     }
-    // 3단계 (마침표가 연달아 나올 때 현재문자 삭제)
+    // 3단계 (마침표가 연달아 나올 때 마침표 하나만 남기고 삭제)
     private static void step_three(List<Character> id) {
         /*--------------------Start----------------------*/
         int cnt = 0;
@@ -123,7 +123,7 @@ public class programmers01_72410 {
         }
         System.out.println();
     }
-    // 6단계 (new_id길이가 16이상일 때 그 뒤의 문자들 삭제)
+    // 6단계 (new_id길이가 16이상일 때 그 뒤의 문자들 삭제 || 15번째 인덱스가 마침표면 이것도 삭제)
     private static void step_six(List<Character> id) {
         /*--------------------Start----------------------*/
         if (id.size() >= 16) {
@@ -139,7 +139,7 @@ public class programmers01_72410 {
         }
         System.out.println();
     }
-    // 7단계 (길이가 2자 이하라면 마지막 문자 똑같이 추가해줌)
+    // 7단계 (길이가 2자 이하라면 길이가 3이 될때까지 마지막 문자 똑같이 추가해줌)
     private static void step_seven(List<Character> id, StringBuilder answer) {
         /*--------------------Start----------------------*/
         if (id.size() <= 2) {

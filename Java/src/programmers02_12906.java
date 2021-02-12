@@ -15,18 +15,14 @@ public class programmers02_12906 {
 
     public static int[] solution(int[] arr) {
         // String -> StringBuilder로 바꾸니 효율성 테스트 통과
-        StringBuilder temp = new StringBuilder();   // arr 값을 담아놓음
         StringBuilder res = new StringBuilder();    // 필터링한 결과값을 담을 String변수
-        for (int i : arr) {
-            temp.append(String.valueOf(i));
-        }
 
         // 중복 제거
-        for (int i = 0; i < temp.length(); i++) {
-            if ((i != temp.length() - 1) && (temp.charAt(i) != temp.charAt(i + 1))) {
-                res.append(temp.charAt(i));
-            } else if (i == temp.length() - 1) {
-                res.append(temp.charAt(i));
+        for (int i = 0; i < arr.length; i++) {
+            if ((i != arr.length - 1) && (arr[i] != arr[i + 1])) {
+                res.append(arr[i]);
+            } else if (i == arr.length - 1) {
+                res.append(arr[i]);
             }
         }
 
