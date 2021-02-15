@@ -3,7 +3,7 @@ import java.util.*;
 /*
 https://programmers.co.kr/learn/courses/30/lessons/72410?language=java
  */
-public class programmers01_72410 {
+public class Programmers01_72410 {
 
     public static void main(String[] args) {
         String ex1 = "...!@BaT#*..y.abcdefghijklm*";

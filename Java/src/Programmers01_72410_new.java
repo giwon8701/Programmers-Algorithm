@@ -4,7 +4,7 @@ import java.util.Locale;
 
 // id를 String에 담아서 풀어보기
 // 정규식 이용하여 풀어보기
-public class programmers01_72410_new {
+public class Programmers01_72410_new {
     public static void main(String[] args) {
         List<Character> id = new ArrayList<>();
 
