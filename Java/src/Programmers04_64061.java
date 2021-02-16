@@ -20,26 +20,22 @@ public class Programmers04_64061 {
 
         for (int col : moves) {
             for (int row = 0; row < board.length; row++) {
-                // 스택이 비어있지않고, 집어든 값이 가장 위의 값과 같은경우
+                // 스택이 비어있지않고, 집어든 값이 가장 위의 값과 같은경우 삭제
                 if (!stack.empty() && (stack.peek() == board[row][col - 1])) {
-                    //System.out.println(board[row][col - 1]);
+                    System.out.println(board[row][col - 1]);
                     stack.pop();
-                    answer += 2;
                     board[row][col - 1] = 0;
+                    answer += 2;
                     break;
                 }
-                // 값이 0이 아닐 경우
+                // 값이 0이 아닐 경우 stack으로 가져옴
                 else if (board[row][col - 1] != 0) {
-                    //System.out.println(board[row][col - 1]);
+                    System.out.println(board[row][col - 1]);
                     stack.push(board[row][col - 1]);
                     board[row][col - 1] = 0;
                     break;
                 }
-                /*
-                else if (board[row][col - 1] == 0 && row == board.length-1) {
-                    System.out.println(board[row][col - 1]);
-                }
-                */
+
             }
         }
         return answer;
