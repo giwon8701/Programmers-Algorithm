@@ -1,7 +1,5 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
+import javax.print.attribute.HashPrintJobAttributeSet;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /*
@@ -24,22 +22,21 @@ public class Programmers08_42587 {
     public static int solution(int[] priorities, int location) {
         // location의 앞에 아무것도 없으면 첫번째로 출력(1)
         int answer = location + 1;
-        int cnt = location;
 
-        // collect() : 원하는 자료형으로 변환해줌
-        // boxed() : 원시타입을 참조타입으로 바꿔줌
-        // mapToInt(Integer::intValue) : 참조타입을 원시타입으로 바꿔줌
-        List<Integer> list = Arrays.stream(priorities).boxed().collect(Collectors.toList());
+        Queue<int[]> queue = new LinkedList<>();
 
-        int i = 0;
-        while(i < priorities.length) {
-            if (list.get(i) <= list.get(i+1)) {
-                list.add(list.get(i));
-                list.remove(i);
-                i--;
-            }
-            i++;
+        for (int i=0; i<priorities.length; i++) {
+            int[] arr = {i, priorities[i]};
+            queue.add(arr);
         }
+
+        for (int[] i: queue) {
+            if ((queue.peek() != null) && (queue.peek()[1] == i[1])) {
+                queue.add();
+            }
+        }
+
+
 
 
         return answer;

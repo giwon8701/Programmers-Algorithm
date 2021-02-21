@@ -12,16 +12,15 @@ public class Programmers06_68644 {
     }
 
     public static int[] solution(int[] numbers) {
+        // 중복x, 오름차순 유지
         Set<Integer> set = new TreeSet<>();
 
         for (int i=0; i<numbers.length; i++) {
             for (int j=0; j<numbers.length; j++) {
-                if (i != j) {
-                    set.add(numbers[i] + numbers[j]);
-                }
+                if (i != j) set.add(numbers[i] + numbers[j]);
             }
         }
-/*
+
         int[] answer = new int[set.size()];
         Iterator<Integer> itr = set.iterator();
 
@@ -32,7 +31,7 @@ public class Programmers06_68644 {
         }
 
         return answer;
-*/
-        return set.stream().mapToInt(Integer::intValue).toArray();
+
+        //return set.stream().mapToInt(Integer::intValue).toArray();
     }
 }
