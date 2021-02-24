@@ -2,6 +2,7 @@ import java.util.*;
 
 /*
 https://programmers.co.kr/learn/courses/30/lessons/42587
+프린터
  */
 
 public class Programmers08_42587 {
