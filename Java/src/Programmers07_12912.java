@@ -1,3 +1,6 @@
+/*
+https://programmers.co.kr/learn/courses/30/lessons/12912
+ */
 public class Programmers07_12912 {
     public static void main(String[] args) {
 
