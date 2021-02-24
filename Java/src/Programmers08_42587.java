@@ -9,7 +9,7 @@ public class Programmers08_42587 {
     public static void main(String[] args) {
 
         int[][] priorites = {
-                {2, 1, 3, 2},
+                {2, 1, 3, 2, 4, 6, 4, 7},
                 {1, 1, 9, 1, 1, 1}
         };
         int[] location = {2, 0};
@@ -36,16 +36,24 @@ public class Programmers08_42587 {
                     list.add(list.get(i));
                     list.remove(i);
                     j = i;  // for문에 의해서 j = i+1부터 시작
+
+                    System.out.print("[ ");
+                    for (int[] a: list) {
+                        System.out.print(a[1]+" ");
+                    }
+                    System.out.println("]");
                 }
             }
         }
 
         // list의 위치가 locaion변수와 같다면 answer+1해줌
         for(int i=0; i<priorities.length; i++) {
+            System.out.print(list.get(i)[0]+" ");
             if (list.get(i)[0] == location) {
                 answer = i+1;
             }
         }
+        System.out.println();
 
         return answer;
     }
