@@ -14,6 +14,7 @@ public class Programmers07_12912 {
         }
 
         return answer;
+        //return (long) (a + b) * Math.abs(a-b+1) / 2;
         // 내가 쓴 코드가 효율이 훨씬 좋음 ㅎㅎ
         //return sumAtoB(Math.min(a,b), Math.max(a,b));
     }
