@@ -24,20 +24,17 @@ public class Programmers09_42862 {
 
     public static int solution(int n, int[] lost, int[] reserve) {
         int answer = 0;
+        // key : 학생번호,  val : 체육복갯수
         HashMap<Integer, Integer> map = new HashMap<>();
 
-        for(int i=1; i<=n; i++) {
-            map.put(i, 1);
-        }
+        for(int i=1; i<=n; i++) map.put(i, 1);
         map.put(0, 0);
         map.put(n+1, 0);
 
-        for (int i: lost) {
-            map.replace(i, map.get(i)-1);
-        }
-        for (int i: reserve) {
-            map.replace(i, map.get(i)+1);
-        }
+        // 도난당한 사람들은 체육복 갯수 -1
+        for (int i: lost) map.replace(i, map.get(i)-1);
+        // 여분이 있는 사람들은 체육복 갯수 +1
+        for (int i: reserve) map.replace(i, map.get(i)+1);
 
         for (int i=1; i<=n; i++) {
             if (map.get(i) == 0) {
@@ -52,9 +49,7 @@ public class Programmers09_42862 {
         }
 
         for (int i: map.values()) {
-            if (i > 0) {
-                answer++;
-            }
+            if (i > 0) answer++;
         }
 
         return answer;
