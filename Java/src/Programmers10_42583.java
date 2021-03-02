@@ -14,35 +14,37 @@ public class Programmers10_42583 {
             {10, 10, 10, 10, 10, 10, 10 ,10, 10, 10}
         };
 
-        int i = 2;
+        int i = 0;
         System.out.println("answer : " + solution(bridge_length[i], weight[i], truck_weights[i]));
     }
 
     public static int solution(int bridge_length, int weight, int[] truck_weights) {
-        int answer = 1;
+        int sec = 0;
         // 넘어가야 할 트럭의 갯수
         Queue<Integer> start = new LinkedList<>();
         Queue<Integer> bridge = new LinkedList<>();
         Queue<Integer> end = new LinkedList<>();
         int bridge_weight = 0;
 
+        // start에 트럭을 실어줌
         for(int truck: truck_weights) {
             start.add(truck);
         }
+        // bridge에 0을 실어줌
         for (int i=0; i<bridge_length; i++) {
             bridge.add(0);
         }
-
+        // 다리를 건넌 트럭 갯수 == 트럭 총 갯수일때 종료
         while(end.size() != truck_weights.length) {
 
             if (!start.isEmpty()) {
                 // 다음 트럭이 들어와도 무게가 충분하면
                 if (bridge_weight + start.peek() <= weight) {
-                    // 다리 진입함
+                    // 다리 진입함 (start -> bridge)
                     bridge_weight += start.peek();
                     bridge.add(start.poll());
 
-                    // 다리 건넜음
+                    // 다리 건넜음 (bridge -> end)
                     if (bridge.peek() == 0) {
                         bridge.poll();
                     } else {
@@ -51,7 +53,7 @@ public class Programmers10_42583 {
                     }
                 // 무게초과 직전이라 트럭이 들어올 수 없으면
                 } else if (bridge_weight + start.peek() > weight) {
-                    // peek에 트럭이 있으면 다리를 건너게 하고
+                    // 다리 맨 끝에 트럭이 있으면 다리를 건너게 하고
                     if (!bridge.isEmpty() && bridge.peek() != 0) {
                         bridge_weight -= bridge.peek();
                         end.add(bridge.poll());
@@ -63,7 +65,7 @@ public class Programmers10_42583 {
                         } else {
                             bridge.add(0);
                         }
-                    // peek에 트럭이 없으면(=0이 있으면) 무게초과를 해결할 수 없으므로 한칸이동만 함
+                    // 다리 맨 끝에 트럭이 없으면(=0이 있으면) 무게초과를 해결할 수 없으므로 한칸이동만 함
                     } else {
                         bridge.poll();
                         bridge.add(0);
@@ -88,12 +90,12 @@ public class Programmers10_42583 {
                 }
 
             }
-            answer++;
+            sec++;
+            System.out.println("초: " + sec + ", end : " + end + ", bridge : " + bridge + ", start : " + start);
         }
 
-        answer--;
 
 
-        return answer;
+        return sec;
     }
 }
