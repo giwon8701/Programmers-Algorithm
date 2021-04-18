@@ -1,6 +1,6 @@
 import java.util.Stack;
 
-public class Programmers04_64061 {
+public class Programmers02_64061 {
     public static void main(String[] args) {
         int[][] board = {
                 {0, 0, 0, 0, 0},

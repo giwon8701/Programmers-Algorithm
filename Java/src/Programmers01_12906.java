@@ -2,7 +2,7 @@ import java.util.Arrays;
 /*
 https://programmers.co.kr/learn/courses/30/lessons/12906?language=java
  */
-public class Programmers02_12906 {
+public class Programmers01_12906 {
     public static void main(String[] args) {
         int[] arr_01 = {1, 1, 3, 3, 0, 1, 1};
         int[] arr_02 = {4, 4, 4, 3, 3};

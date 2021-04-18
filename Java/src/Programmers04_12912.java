@@ -1,7 +1,7 @@
 /*
 https://programmers.co.kr/learn/courses/30/lessons/12912
  */
-public class Programmers07_12912 {
+public class Programmers04_12912 {
     public static void main(String[] args) {
 
         System.out.println(solution(3, 5));

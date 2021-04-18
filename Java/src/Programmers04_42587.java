@@ -5,7 +5,7 @@ https://programmers.co.kr/learn/courses/30/lessons/42587
 프린터
  */
 
-public class Programmers08_42587 {
+public class Programmers04_42587 {
     public static void main(String[] args) {
 
         int[][] priorites = {

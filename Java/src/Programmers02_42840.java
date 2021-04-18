@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Programmers03_42840 {
+public class Programmers02_42840 {
     public static void main(String[] args) {
 
         int[] answer = {1, 2, 3, 4, 5};

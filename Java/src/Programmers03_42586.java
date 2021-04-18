@@ -3,7 +3,7 @@ import java.util.*;
 https://programmers.co.kr/learn/courses/30/lessons/42586
  */
 
-public class Programmers05_42586 {
+public class Programmers03_42586 {
     public static void main(String[] args) {
 
         int[][] progresses = {

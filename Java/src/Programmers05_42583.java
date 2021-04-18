@@ -4,7 +4,7 @@ import java.util.Queue;
 https://programmers.co.kr/learn/courses/30/lessons/42583
 코드 너무 더럽게 짰다....
  */
-public class Programmers10_42583 {
+public class Programmers05_42583 {
     public static void main(String[] args) {
         int[] bridge_length = {2, 100, 100};
         int[] weight = {10, 100, 100};

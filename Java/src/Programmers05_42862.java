@@ -2,7 +2,7 @@ import java.util.HashMap;
 /*
 https://programmers.co.kr/learn/courses/30/lessons/42862
  */
-public class Programmers09_42862 {
+public class Programmers05_42862 {
     public static void main(String[] args) {
 
         int[] n = {5, 5, 3};

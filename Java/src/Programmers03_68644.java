@@ -4,7 +4,7 @@ import java.util.*;
 https://programmers.co.kr/learn/courses/30/lessons/68644
 두 개 뽑아서 더하기
  */
-public class Programmers06_68644 {
+public class Programmers03_68644 {
     public static void main(String[] args) {
         int[] numbers = {2, 1, 3, 4, 1};
 
