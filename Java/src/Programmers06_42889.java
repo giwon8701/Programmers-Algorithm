@@ -40,10 +40,11 @@ public class Programmers06_42889 {
         // list를 정렬해준다. (reverseorder() => 내림차순정렬)
         list.sort(Map.Entry.comparingByValue(Comparator.reverseOrder()));
 
-
         int[] result = new int[N];
         for (int i=0; i<N; i++) {
             result[i] = list.get(i).getKey();
+            System.out.println("Key() : " + list.get(i).getKey());
+            System.out.println("Value() : " + list.get(i).getValue());
             System.out.println(list.get(i));
         }
 

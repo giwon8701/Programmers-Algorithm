@@ -1,7 +1,7 @@
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class Programmers07_42746 {
+public class Programmers06_42746 {
     public static void main(String[] args) {
         int[][] numbers = {
             {6, 10, 2},
