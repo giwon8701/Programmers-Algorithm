@@ -9,10 +9,9 @@ let signs = [
 ];
 let i = 0;
 
+function solution(absolutes) {
+    
+}
 
 let res = absolutes[i];
 console.log(typeof(res))
-
-function solution(absolutes[i]) {
-    
-}
