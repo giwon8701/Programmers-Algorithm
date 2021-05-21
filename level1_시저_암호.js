@@ -11,7 +11,7 @@ function solution(s, n) {
             if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) {
                 // charCodeAt(n) : 문자열의 n번째 자리를 아스키코드로 변환
                 a = c.charCodeAt(0)+n;
-                
+
                 // 알파벳을 밀었을 때 z보다 크다면, 밀린만큼 'a'에 더해줌
                 if (String.fromCharCode(a) > 'z') {
                     a = 'a'.charCodeAt(0) + (a -'z'.charCodeAt(0) - 1);
@@ -19,7 +19,7 @@ function solution(s, n) {
                     a = 'A'.charCodeAt(0) + (a -'Z'.charCodeAt(0) - 1);
                 }
                 a = String.fromCharCode(a);
-            } else {
+            } else {    // c가 공백일 경우
                 a = c;
             }
             return a;
