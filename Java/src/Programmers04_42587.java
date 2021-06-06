@@ -57,4 +57,10 @@ public class Programmers04_42587 {
 
         return answer;
     }
+
+    int answer = 0;
+    List<int[]> list = new ArrayList<>();
+
+    // list에 (위치, 값)의 형식으로 넣어줌
+
 }
