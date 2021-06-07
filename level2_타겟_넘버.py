@@ -1,6 +1,4 @@
-# -*- coding:utf-8 -*-
 def solution(numbers, target):
-    answer = 0
     sub = [0]
 
     for num in numbers:
@@ -11,3 +9,6 @@ def solution(numbers, target):
         sub = imsi
 
     return sub.count(target)
+
+
+print(solution([1, 1, 1, 1, 1], 3))
