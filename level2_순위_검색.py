@@ -11,7 +11,6 @@ def solution(info, query):
 
     for info_idx in info:
         info_arr.append(info_idx.split(" "))
-        info.arr
     for query_idx in query:
         query_arr.append(query_idx.replace(" and ", " ").split(" "))
 
